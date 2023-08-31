@@ -1,6 +1,7 @@
 file(GLOB SOURCES 
 	"./*.c" "./*.cpp"
 	"hello/*.c" "hello/*.cpp"
+	"ringbuffer/*.c" "ringbuffer/*.cpp"
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
@@ -19,6 +20,7 @@ set_property(TARGET imp_libCppUTestExt PROPERTY
              IMPORTED_LOCATION $ENV{CPPUTEST_HOME}/lib/libCppUTestExt.a)
 
 target_link_libraries(${PROJECT_NAME} 
+    ringbuffer
     hello
     imp_cpputest imp_libCppUTestExt
     )
