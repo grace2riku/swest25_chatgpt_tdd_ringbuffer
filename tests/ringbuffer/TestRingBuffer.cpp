@@ -19,9 +19,8 @@ IGNORE_TEST(RingBuffer, Create)
 }
 
 TEST(RingBuffer, EnqueueAndDequeue) {
-    FAIL("EnqueueAndDequeue test Start here!!!");
-//    buffer->enqueue(1);
-//    CHECK_EQUAL(1, buffer->dequeue());
+    buffer->enqueue(1);
+    CHECK_EQUAL(1, buffer->dequeue());
 }
 
 #if 0
