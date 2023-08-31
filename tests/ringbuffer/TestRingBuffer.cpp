@@ -23,7 +23,6 @@ TEST(RingBuffer, EnqueueAndDequeue) {
     CHECK_EQUAL(1, buffer->dequeue());
 }
 
-#if 0
 TEST(RingBuffer, BufferIsEmpty) {
     CHECK_TRUE(buffer->isEmpty());
     buffer->enqueue(1);
@@ -47,4 +46,3 @@ TEST(RingBuffer, OverflowThrowsException) {
 TEST(RingBuffer, UnderflowThrowsException) {
     CHECK_THROWS(std::runtime_error, buffer->dequeue());
 }
-#endif
