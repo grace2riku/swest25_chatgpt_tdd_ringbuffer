@@ -18,12 +18,13 @@ IGNORE_TEST(RingBuffer, Create)
   FAIL("RingBuffer Start here!!!");
 }
 
-#if 0
 TEST(RingBuffer, EnqueueAndDequeue) {
-    buffer->enqueue(1);
-    CHECK_EQUAL(1, buffer->dequeue());
+    FAIL("EnqueueAndDequeue test Start here!!!");
+//    buffer->enqueue(1);
+//    CHECK_EQUAL(1, buffer->dequeue());
 }
 
+#if 0
 TEST(RingBuffer, BufferIsEmpty) {
     CHECK_TRUE(buffer->isEmpty());
     buffer->enqueue(1);
