@@ -9,6 +9,8 @@ else()
   return()
 endif()
 
+set(CMAKE_CXX_STANDARD 17)
+
 enable_language(C)
 enable_language(CXX)
 
