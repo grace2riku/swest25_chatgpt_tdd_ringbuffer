@@ -11,6 +11,7 @@ public:
     int dequeue();
     bool isEmpty() const;
     bool isFull() const;
+    size_t availableSpace() const;
 
 private:
     std::vector<int> buffer_;
