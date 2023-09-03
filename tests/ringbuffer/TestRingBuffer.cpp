@@ -46,3 +46,7 @@ TEST(RingBuffer, OverflowThrowsException) {
 TEST(RingBuffer, UnderflowThrowsException) {
     CHECK_THROWS(std::runtime_error, buffer->dequeue());
 }
+
+TEST(RingBuffer, AvailableSpaceInitial) {
+    CHECK_EQUAL(5, buffer->availableSpace());
+}
