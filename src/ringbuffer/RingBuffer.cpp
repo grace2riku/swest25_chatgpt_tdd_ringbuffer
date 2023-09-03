@@ -30,5 +30,5 @@ bool RingBuffer::isFull() const {
 }
 
 size_t RingBuffer::availableSpace() const {
-    return 5;
+    return buffer_.size() - count_;
 }
