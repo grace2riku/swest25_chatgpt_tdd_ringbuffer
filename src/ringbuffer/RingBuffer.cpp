@@ -28,3 +28,7 @@ bool RingBuffer::isEmpty() const {
 bool RingBuffer::isFull() const {
     return count_ == buffer_.size();
 }
+
+size_t RingBuffer::availableSpace() const {
+    return 0;
+}
