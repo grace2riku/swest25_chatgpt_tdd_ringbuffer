@@ -50,3 +50,19 @@ TEST(RingBuffer, UnderflowThrowsException) {
 TEST(RingBuffer, AvailableSpaceInitial) {
     CHECK_EQUAL(5, buffer->availableSpace());
 }
+
+TEST(RingBuffer, AvailableSpaceAfterEnqueue) {
+    buffer->enqueue(1);
+    CHECK_EQUAL(4, buffer->availableSpace());
+
+    buffer->enqueue(2);
+    CHECK_EQUAL(3, buffer->availableSpace());
+}
+
+TEST(RingBuffer, AvailableSpaceAfterDequeue) {
+    buffer->enqueue(1);
+    buffer->enqueue(2);
+    buffer->dequeue();
+
+    CHECK_EQUAL(4, buffer->availableSpace());
+}
